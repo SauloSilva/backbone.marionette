@@ -44,6 +44,11 @@ describe('marionette controller', function() {
     it('should maintain a reference to the options', function() {
       expect(this.controller.options).to.eql(this.initializeOptions);
     });
+
+    it('should contains cid', function() {
+      expect(this.controller.cid).to.be.a('string');
+      expect(this.controller.cid).to.exist;
+    });
   });
 
   describe('when no options argument is supplied to the constructor', function() {
